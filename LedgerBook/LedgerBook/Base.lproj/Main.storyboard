@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -39,7 +40,10 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="First" image="image1.png" selectedImage="image1_2.png" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="FirstItem" destination="acW-dT-cKf" id="RZu-wP-UQI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,6 +106,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="first" id="b7F-0X-XdG"/>
                     <connections>
+                        <outlet property="SecondItem" destination="b7F-0X-XdG" id="aSZ-Ke-cTN"/>
                         <outlet property="type" destination="2Nb-qN-uRC" id="NKh-MC-Xyw"/>
                         <outlet property="typePicker" destination="bxk-aV-T0B" id="nGr-Pj-ayf"/>
                     </connections>
@@ -146,6 +151,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Third" id="WYA-PP-m8n"/>
+                    <connections>
+                        <outlet property="ThirdItem" destination="WYA-PP-m8n" id="rtp-tA-mbP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eah-MH-9Zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,6 +173,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fourth" id="Aku-vl-rif"/>
+                    <connections>
+                        <outlet property="FourthItem" destination="Aku-vl-rif" id="YOl-k4-ykX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5j2-Zh-aXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,5 +184,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="image1.png" width="33" height="30"/>
+        <image name="image1_2.png" width="31" height="30"/>
     </resources>
 </document>

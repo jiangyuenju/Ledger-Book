@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AddItemViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITabBarItem *SecondItem;
 
 
 @end

@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage *image4 = [[UIImage imageNamed:@"image4.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *image4_2 = [[UIImage imageNamed:@"image4_2.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    (void)[self.FourthItem initWithTitle:@"扫一扫" image:image4 selectedImage:image4_2];
     // Do any additional setup after loading the view.
 }
 

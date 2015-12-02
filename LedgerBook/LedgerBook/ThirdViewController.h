@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ThirdViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITabBarItem *ThirdItem;
 
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FourthViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITabBarItem *FourthItem;
 
 @end

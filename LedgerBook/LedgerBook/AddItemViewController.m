@@ -21,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.type.delegate=self;
+    UIImage *image2 = [[UIImage imageNamed:@"image2.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *image2_2 = [[UIImage imageNamed:@"image2_2.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    (void)[self.SecondItem initWithTitle:@"添加" image:image2 selectedImage:image2_2];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
