@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -31,12 +30,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMf-V3-nDL">
-                                <rect key="frame" x="566" y="24" width="22" height="22"/>
-                                <connections>
-                                    <action selector="clickAdd" destination="9pv-A4-QxB" eventType="touchUpInside" id="jKg-mO-IjV"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -44,16 +37,9 @@
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HMf-V3-nDL" secondAttribute="trailing" id="qeZ-rk-kRf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="image1.png" selectedImage="image1_2.png" id="acW-dT-cKf"/>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="FirstItem" destination="acW-dT-cKf" id="RZu-wP-UQI"/>
-                        <outlet property="myButton" destination="HMf-V3-nDL" id="vtJ-0O-ZtS"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,14 +86,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxk-aV-T0B">
-                                <rect key="frame" x="0.0" y="262" width="600" height="162"/>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WGa-R1-9CI">
+                                <rect key="frame" x="0.0" y="386" width="600" height="165"/>
                             </pickerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQN-Mi-Odv">
+                                <rect key="frame" x="0.0" y="342" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="完成" id="GIx-HY-dcM">
+                                        <connections>
+                                            <action selector="doneButtonTypePicker:" destination="8rJ-Kc-sve" id="RsM-7V-2tc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="w8f-uh-9kV"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aFJ-d2-QRd" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="AJu-11-Boc"/>
+                            <constraint firstItem="WGa-R1-9CI" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="GbH-9b-Z1g"/>
                             <constraint firstAttribute="centerX" secondItem="hdb-2U-X6R" secondAttribute="centerX" id="RhT-UJ-QD2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WGa-R1-9CI" secondAttribute="trailing" constant="-16" id="XGY-Z3-1NM"/>
                             <constraint firstItem="hdb-2U-X6R" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="20" id="a8N-fp-TVq"/>
                             <constraint firstItem="2Nb-qN-uRC" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="flk-B9-fDs"/>
                             <constraint firstItem="yB3-c0-hac" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="ouD-no-fHE"/>
@@ -116,9 +115,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="first" id="b7F-0X-XdG"/>
                     <connections>
-                        <outlet property="SecondItem" destination="b7F-0X-XdG" id="aSZ-Ke-cTN"/>
-                        <outlet property="type" destination="2Nb-qN-uRC" id="NKh-MC-Xyw"/>
-                        <outlet property="typePicker" destination="bxk-aV-T0B" id="nGr-Pj-ayf"/>
+                        <outlet property="doneToolBar" destination="fQN-Mi-Odv" id="ASJ-3e-DsE"/>
+                        <outlet property="typePicker" destination="WGa-R1-9CI" id="9NM-YQ-EId"/>
+                        <outlet property="typefield" destination="2Nb-qN-uRC" id="5PR-Ow-28U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -161,9 +160,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Third" id="WYA-PP-m8n"/>
-                    <connections>
-                        <outlet property="ThirdItem" destination="WYA-PP-m8n" id="rtp-tA-mbP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eah-MH-9Zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,9 +179,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fourth" id="Aku-vl-rif"/>
-                    <connections>
-                        <outlet property="FourthItem" destination="Aku-vl-rif" id="YOl-k4-ykX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5j2-Zh-aXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,7 +187,5 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="image1.png" width="33" height="30"/>
-        <image name="image1_2.png" width="31" height="30"/>
     </resources>
 </document>

@@ -17,15 +17,6 @@
 		7C7DC9551C0DBFE400CB978F /* LedgerBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC9541C0DBFE400CB978F /* LedgerBookTests.m */; };
 		7C7DC9601C0DC80900CB978F /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC95F1C0DC80900CB978F /* ThirdViewController.m */; };
 		7C7DC9631C0DC8E600CB978F /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC9621C0DC8E600CB978F /* FourthViewController.m */; };
-		7CF051051C0F18B000B8A5A0 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF050FD1C0F18B000B8A5A0 /* image1.png */; };
-		7CF051061C0F18B000B8A5A0 /* image1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF050FE1C0F18B000B8A5A0 /* image1_2.png */; };
-		7CF051071C0F18B000B8A5A0 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF050FF1C0F18B000B8A5A0 /* image2.png */; };
-		7CF051081C0F18B000B8A5A0 /* image2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051001C0F18B000B8A5A0 /* image2_2.png */; };
-		7CF051091C0F18B000B8A5A0 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051011C0F18B000B8A5A0 /* image3.png */; };
-		7CF0510A1C0F18B000B8A5A0 /* image3_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051021C0F18B000B8A5A0 /* image3_2.png */; };
-		7CF0510B1C0F18B000B8A5A0 /* image4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051031C0F18B000B8A5A0 /* image4.png */; };
-		7CF0510C1C0F18B000B8A5A0 /* image4_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051041C0F18B000B8A5A0 /* image4_2.png */; };
-		7CF0511B1C0F1F3A00B8A5A0 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0511A1C0F1F3A00B8A5A0 /* KxMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,16 +49,6 @@
 		7C7DC95F1C0DC80900CB978F /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		7C7DC9611C0DC8E600CB978F /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
 		7C7DC9621C0DC8E600CB978F /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
-		7CF050FD1C0F18B000B8A5A0 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image1.png; path = image/image1.png; sourceTree = SOURCE_ROOT; };
-		7CF050FE1C0F18B000B8A5A0 /* image1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image1_2.png; path = image/image1_2.png; sourceTree = SOURCE_ROOT; };
-		7CF050FF1C0F18B000B8A5A0 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image2.png; path = image/image2.png; sourceTree = SOURCE_ROOT; };
-		7CF051001C0F18B000B8A5A0 /* image2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image2_2.png; path = image/image2_2.png; sourceTree = SOURCE_ROOT; };
-		7CF051011C0F18B000B8A5A0 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image3.png; path = image/image3.png; sourceTree = SOURCE_ROOT; };
-		7CF051021C0F18B000B8A5A0 /* image3_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image3_2.png; path = image/image3_2.png; sourceTree = SOURCE_ROOT; };
-		7CF051031C0F18B000B8A5A0 /* image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image4.png; path = image/image4.png; sourceTree = SOURCE_ROOT; };
-		7CF051041C0F18B000B8A5A0 /* image4_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image4_2.png; path = image/image4_2.png; sourceTree = SOURCE_ROOT; };
-		7CF051191C0F1F3A00B8A5A0 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
-		7CF0511A1C0F1F3A00B8A5A0 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +90,6 @@
 		7C7DC9341C0DBFE400CB978F /* LedgerBook */ = {
 			isa = PBXGroup;
 			children = (
-				7CF051191C0F1F3A00B8A5A0 /* KxMenu.h */,
-				7CF0511A1C0F1F3A00B8A5A0 /* KxMenu.m */,
 				7C7DC9391C0DBFE400CB978F /* AppDelegate.h */,
 				7C7DC93A1C0DBFE400CB978F /* AppDelegate.m */,
 				7C7DC93C1C0DBFE400CB978F /* FirstViewController.h */,
@@ -134,14 +113,6 @@
 			children = (
 				7C7DC9361C0DBFE400CB978F /* Info.plist */,
 				7C7DC9371C0DBFE400CB978F /* main.m */,
-				7CF050FD1C0F18B000B8A5A0 /* image1.png */,
-				7CF050FE1C0F18B000B8A5A0 /* image1_2.png */,
-				7CF050FF1C0F18B000B8A5A0 /* image2.png */,
-				7CF051001C0F18B000B8A5A0 /* image2_2.png */,
-				7CF051011C0F18B000B8A5A0 /* image3.png */,
-				7CF051021C0F18B000B8A5A0 /* image3_2.png */,
-				7CF051031C0F18B000B8A5A0 /* image4.png */,
-				7CF051041C0F18B000B8A5A0 /* image4_2.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -243,15 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CF0510A1C0F18B000B8A5A0 /* image3_2.png in Resources */,
 				7C7DC9441C0DBFE400CB978F /* Main.storyboard in Resources */,
-				7CF051051C0F18B000B8A5A0 /* image1.png in Resources */,
-				7CF051071C0F18B000B8A5A0 /* image2.png in Resources */,
-				7CF051091C0F18B000B8A5A0 /* image3.png in Resources */,
-				7CF051081C0F18B000B8A5A0 /* image2_2.png in Resources */,
-				7CF0510B1C0F18B000B8A5A0 /* image4.png in Resources */,
-				7CF051061C0F18B000B8A5A0 /* image1_2.png in Resources */,
-				7CF0510C1C0F18B000B8A5A0 /* image4_2.png in Resources */,
 				7C7DC9491C0DBFE400CB978F /* LaunchScreen.xib in Resources */,
 				7C7DC9461C0DBFE400CB978F /* Images.xcassets in Resources */,
 			);
@@ -275,7 +238,6 @@
 				7C7DC9411C0DBFE400CB978F /* AddItemViewController.m in Sources */,
 				7C7DC9601C0DC80900CB978F /* ThirdViewController.m in Sources */,
 				7C7DC93B1C0DBFE400CB978F /* AppDelegate.m in Sources */,
-				7CF0511B1C0F1F3A00B8A5A0 /* KxMenu.m in Sources */,
 				7C7DC93E1C0DBFE400CB978F /* FirstViewController.m in Sources */,
 				7C7DC9381C0DBFE400CB978F /* main.m in Sources */,
 			);
@@ -474,7 +436,6 @@
 				7C7DC95A1C0DBFE400CB978F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		7C7DC95B1C0DBFE400CB978F /* Build configuration list for PBXNativeTarget "LedgerBookTests" */ = {
 			isa = XCConfigurationList;
@@ -483,7 +444,6 @@
 				7C7DC95D1C0DBFE400CB978F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

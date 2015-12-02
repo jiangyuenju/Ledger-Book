@@ -16,9 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *image3 = [[UIImage imageNamed:@"image3.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *image3_2 = [[UIImage imageNamed:@"image3_2.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    (void)[self.ThirdItem initWithTitle:@"报表" image:image3 selectedImage:image3_2];
     // Do any additional setup after loading the view.
 }
 

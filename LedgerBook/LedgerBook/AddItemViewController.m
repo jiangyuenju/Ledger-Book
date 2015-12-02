@@ -10,20 +10,31 @@
 
 @interface AddItemViewController ()<UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UIToolbar *doneToolBar;
 @property (weak, nonatomic) IBOutlet UIPickerView *typePicker;
-
-@property (weak, nonatomic) IBOutlet UITextField *type;
+@property (strong, nonatomic) NSMutableArray *types;
+@property (weak, nonatomic) IBOutlet UITextField *typefield;
 
 @end
 
 @implementation AddItemViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.type.delegate=self;
-    UIImage *image2 = [[UIImage imageNamed:@"image2.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *image2_2 = [[UIImage imageNamed:@"image2_2.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    (void)[self.SecondItem initWithTitle:@"添加" image:image2 selectedImage:image2_2];
+    
+//    self.typePicker=[[UIPickerView alloc]init];
+    self.typePicker.dataSource=self;
+    self.typePicker.delegate=self;
+    self.typePicker.hidden=YES;
+    self.doneToolBar.hidden=YES;
+    
+    self.types=[NSMutableArray arrayWithObjects:@"餐饮",@"娱乐",@"书籍", nil];
+    
+    self.typefield.delegate=self;
+    self.typefield.inputView= self.typePicker;
+//  self.typefield.inputAccessoryView=self.doneToolBar;
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -32,26 +43,39 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)setTypeFieldKeyboard{
-    UIPickerView *picker=[[UIPickerView alloc]init];
-    self.typePicker=picker;
-    picker.dataSource=self;
-    picker.delegate=self;
-}
-
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return 10;//TODO:modify later
+    return [self.types count];
 }
 
+//- (IBAction)doneButtonTypePicker:(id)sender {
+//    [self.typefield endEditing:YES];
+//}
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
-    if(textField==self.type){
+    if(textField==self.typefield){
+        [self.typefield resignFirstResponder];
+        self.doneToolBar.hidden=NO;
+        self.typePicker.hidden=NO;
         [self pickerView:self.typePicker didSelectRow:0 inComponent:0];
     }
+}
+
+-(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [self.types objectAtIndex:row];
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSString *typeName = [self types][row];
+    self.typefield.text = typeName;
+}
+
+- (IBAction)doneButtonTypePicker:(id)sender {
+    self.typePicker.hidden=YES;
+    self.doneToolBar.hidden=YES;
 }
 
 @end
