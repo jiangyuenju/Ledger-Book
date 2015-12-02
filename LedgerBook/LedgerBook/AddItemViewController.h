@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddItemViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITabBarItem *SecondItem;
 
+@interface AddItemViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITabBarItem *SecondItem;
 
 @end
 

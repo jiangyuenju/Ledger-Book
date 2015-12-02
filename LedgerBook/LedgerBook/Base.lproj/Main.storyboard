@@ -100,15 +100,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxk-aV-T0B">
-                                <rect key="frame" x="0.0" y="262" width="600" height="162"/>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxk-aV-T0B">
+                                <rect key="frame" x="0.0" y="389" width="600" height="162"/>
                             </pickerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9b-3R-qeu">
+                                <rect key="frame" x="0.0" y="367" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="完成" id="wbB-Zr-T3S">
+                                        <connections>
+                                            <action selector="doneButtonTypePicker:" destination="8rJ-Kc-sve" id="eMb-OZ-lSD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SKR-Zy-x5I"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bxk-aV-T0B" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="9NY-ee-plF"/>
                             <constraint firstItem="aFJ-d2-QRd" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="AJu-11-Boc"/>
                             <constraint firstAttribute="centerX" secondItem="hdb-2U-X6R" secondAttribute="centerX" id="RhT-UJ-QD2"/>
                             <constraint firstItem="hdb-2U-X6R" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="20" id="a8N-fp-TVq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bxk-aV-T0B" secondAttribute="trailing" constant="-20" id="c6Y-Hl-rsw"/>
                             <constraint firstItem="2Nb-qN-uRC" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="flk-B9-fDs"/>
                             <constraint firstItem="yB3-c0-hac" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="ouD-no-fHE"/>
                             <constraint firstItem="BRU-aP-kUF" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="p3t-XI-cF2"/>
@@ -117,8 +130,9 @@
                     <tabBarItem key="tabBarItem" title="Item" image="first" id="b7F-0X-XdG"/>
                     <connections>
                         <outlet property="SecondItem" destination="b7F-0X-XdG" id="aSZ-Ke-cTN"/>
-                        <outlet property="type" destination="2Nb-qN-uRC" id="NKh-MC-Xyw"/>
-                        <outlet property="typePicker" destination="bxk-aV-T0B" id="nGr-Pj-ayf"/>
+                        <outlet property="doneToolBar" destination="B9b-3R-qeu" id="fSj-1O-aFr"/>
+                        <outlet property="typePicker" destination="bxk-aV-T0B" id="RXh-e6-XLy"/>
+                        <outlet property="typefield" destination="2Nb-qN-uRC" id="2kv-Pp-WTG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -138,9 +152,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="Dey-fX-QrS" kind="relationship" relationship="viewControllers" id="iZO-Et-ok6"/>
                         <segue destination="iMU-D7-Rqv" kind="relationship" relationship="viewControllers" id="3pF-54-zgM"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="9oJ-by-byg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
