@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--明细-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
@@ -22,13 +21,13 @@
                                 <rect key="frame" x="221" y="279" width="158" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
                                 <rect key="frame" x="203" y="329" width="195" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMf-V3-nDL">
@@ -47,11 +46,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="HMf-V3-nDL" secondAttribute="trailing" id="qeZ-rk-kRf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="image1.png" selectedImage="image1_2.png" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="明细" image="image1.png" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="FirstItem" destination="acW-dT-cKf" id="RZu-wP-UQI"/>
                         <outlet property="myButton" destination="HMf-V3-nDL" id="vtJ-0O-ZtS"/>
                     </connections>
                 </viewController>
@@ -59,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="996" y="-315"/>
         </scene>
-        <!--Item-->
+        <!--添加-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="AddItemViewController" sceneMemberID="viewController">
@@ -67,44 +65,45 @@
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hdb-2U-X6R">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="hdb-2U-X6R">
                                 <rect key="frame" x="260" y="20" width="81" height="29"/>
                                 <segments>
                                     <segment title="收入"/>
                                     <segment title="支出"/>
                                 </segments>
+                                <connections>
+                                    <action selector="toggleControl:" destination="8rJ-Kc-sve" eventType="valueChanged" id="j9L-Wp-R2t"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="金额：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRU-aP-kUF">
-                                <rect key="frame" x="100" y="80" width="51" height="21"/>
+                                <rect key="frame" x="16" y="103" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFJ-d2-QRd">
-                                <rect key="frame" x="100" y="123" width="285" height="30"/>
+                                <rect key="frame" x="64" y="99" width="520" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDidReturn:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="uRA-U8-WPY"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="种类：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB3-c0-hac">
-                                <rect key="frame" x="100" y="182" width="51" height="21"/>
+                                <rect key="frame" x="16" y="158" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Nb-qN-uRC">
-                                <rect key="frame" x="100" y="216" width="285" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxk-aV-T0B">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxk-aV-T0B">
                                 <rect key="frame" x="0.0" y="389" width="600" height="162"/>
                             </pickerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9b-3R-qeu">
-                                <rect key="frame" x="0.0" y="367" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="345" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="完成" id="wbB-Zr-T3S">
                                         <connections>
@@ -114,24 +113,68 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SKR-Zy-x5I"/>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Nb-qN-uRC">
+                                <rect key="frame" x="64" y="154" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="备注：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpV-Dg-VUz">
+                                <rect key="frame" x="16" y="212" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmR-Ad-eZo">
+                                <rect key="frame" x="0.0" y="389" width="600" height="162"/>
+                            </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XsJ-vH-NXm">
+                                <rect key="frame" x="64" y="212" width="520" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tek-oY-XoX">
+                                <rect key="frame" x="233" y="337" width="134" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="0.69000000000000006" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="完成">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aFJ-d2-QRd" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="48" id="1EN-yq-5qI"/>
+                            <constraint firstItem="2Nb-qN-uRC" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="48" id="80c-9f-QHF"/>
+                            <constraint firstItem="aFJ-d2-QRd" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="9Ed-wN-Hiz"/>
                             <constraint firstItem="bxk-aV-T0B" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="9NY-ee-plF"/>
-                            <constraint firstItem="aFJ-d2-QRd" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="AJu-11-Boc"/>
+                            <constraint firstItem="XsJ-vH-NXm" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="48" id="Abk-Z5-Dni"/>
+                            <constraint firstAttribute="centerX" secondItem="Tek-oY-XoX" secondAttribute="centerX" id="ELE-wp-Kch"/>
+                            <constraint firstItem="yB3-c0-hac" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="NHo-Rb-TEl"/>
+                            <constraint firstItem="2Nb-qN-uRC" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="NrE-Db-tmV"/>
                             <constraint firstAttribute="centerX" secondItem="hdb-2U-X6R" secondAttribute="centerX" id="RhT-UJ-QD2"/>
+                            <constraint firstItem="AmR-Ad-eZo" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="YZw-Yg-1tF"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="AmR-Ad-eZo" secondAttribute="bottom" id="Ywq-Jc-qfx"/>
                             <constraint firstItem="hdb-2U-X6R" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="20" id="a8N-fp-TVq"/>
+                            <constraint firstItem="XsJ-vH-NXm" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="b0k-8f-UuH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bxk-aV-T0B" secondAttribute="trailing" constant="-20" id="c6Y-Hl-rsw"/>
-                            <constraint firstItem="2Nb-qN-uRC" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="flk-B9-fDs"/>
-                            <constraint firstItem="yB3-c0-hac" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="ouD-no-fHE"/>
-                            <constraint firstItem="BRU-aP-kUF" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="p3t-XI-cF2"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="bxk-aV-T0B" secondAttribute="bottom" id="iFr-ys-zJr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AmR-Ad-eZo" secondAttribute="trailing" constant="-16" id="mRg-us-QlJ"/>
+                            <constraint firstItem="BRU-aP-kUF" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="qSH-kt-AUa"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="8rJ-Kc-sve" eventType="touchDown" id="vUM-5o-ehX"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="first" id="b7F-0X-XdG"/>
+                    <tabBarItem key="tabBarItem" title="添加" image="image2.png" id="b7F-0X-XdG"/>
                     <connections>
-                        <outlet property="SecondItem" destination="b7F-0X-XdG" id="aSZ-Ke-cTN"/>
+                        <outlet property="doneBtn" destination="Tek-oY-XoX" id="xFQ-4g-elY"/>
                         <outlet property="doneToolBar" destination="B9b-3R-qeu" id="fSj-1O-aFr"/>
-                        <outlet property="typePicker" destination="bxk-aV-T0B" id="RXh-e6-XLy"/>
+                        <outlet property="incomeTypePicker" destination="AmR-Ad-eZo" id="RYw-hN-W9T"/>
+                        <outlet property="moneyField" destination="aFJ-d2-QRd" id="znH-dk-jkR"/>
+                        <outlet property="outcomeTypePicker" destination="bxk-aV-T0B" id="BIy-0r-00D"/>
+                        <outlet property="psTextView" destination="XsJ-vH-NXm" id="0sX-ax-buz"/>
+                        <outlet property="segControl" destination="hdb-2U-X6R" id="bfh-Hf-elg"/>
                         <outlet property="typefield" destination="2Nb-qN-uRC" id="2kv-Pp-WTG"/>
                     </connections>
                 </viewController>
@@ -152,16 +195,16 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="9oJ-by-byg"/>
                         <segue destination="Dey-fX-QrS" kind="relationship" relationship="viewControllers" id="iZO-Et-ok6"/>
                         <segue destination="iMU-D7-Rqv" kind="relationship" relationship="viewControllers" id="3pF-54-zgM"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="9oJ-by-byg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-11" y="3"/>
         </scene>
-        <!--Third-->
+        <!--报表-->
         <scene sceneID="7sW-w3-nd1">
             <objects>
                 <viewController id="Dey-fX-QrS" customClass="ThirdViewController" sceneMemberID="viewController">
@@ -174,16 +217,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" id="WYA-PP-m8n"/>
-                    <connections>
-                        <outlet property="ThirdItem" destination="WYA-PP-m8n" id="rtp-tA-mbP"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="报表" image="image3.png" id="WYA-PP-m8n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eah-MH-9Zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="316" y="850"/>
         </scene>
-        <!--Fourth-->
+        <!--扫一扫-->
         <scene sceneID="krs-qx-jl7">
             <objects>
                 <viewController id="iMU-D7-Rqv" customClass="FourthViewController" sceneMemberID="viewController">
@@ -196,10 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fourth" id="Aku-vl-rif"/>
-                    <connections>
-                        <outlet property="FourthItem" destination="Aku-vl-rif" id="YOl-k4-ykX"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="扫一扫" image="image4.png" id="Aku-vl-rif"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5j2-Zh-aXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,8 +244,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="image1.png" width="33" height="30"/>
-        <image name="image1_2.png" width="31" height="30"/>
+        <image name="image1.png" width="30" height="30"/>
+        <image name="image2.png" width="30" height="30"/>
+        <image name="image3.png" width="30" height="30"/>
+        <image name="image4.png" width="30" height="30"/>
     </resources>
 </document>

@@ -11,7 +11,6 @@
 
 @interface AddItemViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITabBarItem *SecondItem;
 
 @end
 

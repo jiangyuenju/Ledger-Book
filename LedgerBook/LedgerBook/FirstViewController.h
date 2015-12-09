@@ -10,7 +10,7 @@
 
 @interface FirstViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *myButton;
-@property (weak, nonatomic) IBOutlet UITabBarItem *FirstItem;
+
 
 -(IBAction)clickAdd;
 

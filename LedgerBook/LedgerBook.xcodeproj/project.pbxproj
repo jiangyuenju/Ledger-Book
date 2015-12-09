@@ -17,14 +17,11 @@
 		7C7DC9551C0DBFE400CB978F /* LedgerBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC9541C0DBFE400CB978F /* LedgerBookTests.m */; };
 		7C7DC9601C0DC80900CB978F /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC95F1C0DC80900CB978F /* ThirdViewController.m */; };
 		7C7DC9631C0DC8E600CB978F /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC9621C0DC8E600CB978F /* FourthViewController.m */; };
-		7CF051051C0F18B000B8A5A0 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF050FD1C0F18B000B8A5A0 /* image1.png */; };
-		7CF051061C0F18B000B8A5A0 /* image1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF050FE1C0F18B000B8A5A0 /* image1_2.png */; };
-		7CF051071C0F18B000B8A5A0 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF050FF1C0F18B000B8A5A0 /* image2.png */; };
-		7CF051081C0F18B000B8A5A0 /* image2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051001C0F18B000B8A5A0 /* image2_2.png */; };
-		7CF051091C0F18B000B8A5A0 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051011C0F18B000B8A5A0 /* image3.png */; };
-		7CF0510A1C0F18B000B8A5A0 /* image3_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051021C0F18B000B8A5A0 /* image3_2.png */; };
-		7CF0510B1C0F18B000B8A5A0 /* image4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051031C0F18B000B8A5A0 /* image4.png */; };
-		7CF0510C1C0F18B000B8A5A0 /* image4_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CF051041C0F18B000B8A5A0 /* image4_2.png */; };
+		7CB8463D1C183B330034829B /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB846391C183B330034829B /* image1.png */; };
+		7CB8463E1C183B330034829B /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB8463A1C183B330034829B /* image2.png */; };
+		7CB8463F1C183B330034829B /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB8463B1C183B330034829B /* image3.png */; };
+		7CB846401C183B330034829B /* image4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB8463C1C183B330034829B /* image4.png */; };
+		7CD835981C186D4200BDA330 /* Ledger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD835971C186D4200BDA330 /* Ledger.m */; };
 		7CF0511B1C0F1F3A00B8A5A0 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0511A1C0F1F3A00B8A5A0 /* KxMenu.m */; };
 /* End PBXBuildFile section */
 
@@ -58,14 +55,12 @@
 		7C7DC95F1C0DC80900CB978F /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		7C7DC9611C0DC8E600CB978F /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
 		7C7DC9621C0DC8E600CB978F /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
-		7CF050FD1C0F18B000B8A5A0 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image1.png; path = image/image1.png; sourceTree = SOURCE_ROOT; };
-		7CF050FE1C0F18B000B8A5A0 /* image1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image1_2.png; path = image/image1_2.png; sourceTree = SOURCE_ROOT; };
-		7CF050FF1C0F18B000B8A5A0 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image2.png; path = image/image2.png; sourceTree = SOURCE_ROOT; };
-		7CF051001C0F18B000B8A5A0 /* image2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image2_2.png; path = image/image2_2.png; sourceTree = SOURCE_ROOT; };
-		7CF051011C0F18B000B8A5A0 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image3.png; path = image/image3.png; sourceTree = SOURCE_ROOT; };
-		7CF051021C0F18B000B8A5A0 /* image3_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image3_2.png; path = image/image3_2.png; sourceTree = SOURCE_ROOT; };
-		7CF051031C0F18B000B8A5A0 /* image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image4.png; path = image/image4.png; sourceTree = SOURCE_ROOT; };
-		7CF051041C0F18B000B8A5A0 /* image4_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image4_2.png; path = image/image4_2.png; sourceTree = SOURCE_ROOT; };
+		7CB846391C183B330034829B /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image1.png; path = image/image1.png; sourceTree = SOURCE_ROOT; };
+		7CB8463A1C183B330034829B /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image2.png; path = image/image2.png; sourceTree = SOURCE_ROOT; };
+		7CB8463B1C183B330034829B /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image3.png; path = image/image3.png; sourceTree = SOURCE_ROOT; };
+		7CB8463C1C183B330034829B /* image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image4.png; path = image/image4.png; sourceTree = SOURCE_ROOT; };
+		7CD835961C186D4200BDA330 /* Ledger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ledger.h; sourceTree = "<group>"; };
+		7CD835971C186D4200BDA330 /* Ledger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ledger.m; sourceTree = "<group>"; };
 		7CF051191C0F1F3A00B8A5A0 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
 		7CF0511A1C0F1F3A00B8A5A0 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +120,8 @@
 				7C7DC9351C0DBFE400CB978F /* Supporting Files */,
 				7C7DC9611C0DC8E600CB978F /* FourthViewController.h */,
 				7C7DC9621C0DC8E600CB978F /* FourthViewController.m */,
+				7CD835961C186D4200BDA330 /* Ledger.h */,
+				7CD835971C186D4200BDA330 /* Ledger.m */,
 			);
 			path = LedgerBook;
 			sourceTree = "<group>";
@@ -134,14 +131,10 @@
 			children = (
 				7C7DC9361C0DBFE400CB978F /* Info.plist */,
 				7C7DC9371C0DBFE400CB978F /* main.m */,
-				7CF050FD1C0F18B000B8A5A0 /* image1.png */,
-				7CF050FE1C0F18B000B8A5A0 /* image1_2.png */,
-				7CF050FF1C0F18B000B8A5A0 /* image2.png */,
-				7CF051001C0F18B000B8A5A0 /* image2_2.png */,
-				7CF051011C0F18B000B8A5A0 /* image3.png */,
-				7CF051021C0F18B000B8A5A0 /* image3_2.png */,
-				7CF051031C0F18B000B8A5A0 /* image4.png */,
-				7CF051041C0F18B000B8A5A0 /* image4_2.png */,
+				7CB846391C183B330034829B /* image1.png */,
+				7CB8463A1C183B330034829B /* image2.png */,
+				7CB8463B1C183B330034829B /* image3.png */,
+				7CB8463C1C183B330034829B /* image4.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -212,6 +205,7 @@
 				TargetAttributes = {
 					7C7DC9311C0DBFE400CB978F = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = W2YVPAZ6AP;
 					};
 					7C7DC94D1C0DBFE400CB978F = {
 						CreatedOnToolsVersion = 6.4;
@@ -243,15 +237,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CF0510A1C0F18B000B8A5A0 /* image3_2.png in Resources */,
 				7C7DC9441C0DBFE400CB978F /* Main.storyboard in Resources */,
-				7CF051051C0F18B000B8A5A0 /* image1.png in Resources */,
-				7CF051071C0F18B000B8A5A0 /* image2.png in Resources */,
-				7CF051091C0F18B000B8A5A0 /* image3.png in Resources */,
-				7CF051081C0F18B000B8A5A0 /* image2_2.png in Resources */,
-				7CF0510B1C0F18B000B8A5A0 /* image4.png in Resources */,
-				7CF051061C0F18B000B8A5A0 /* image1_2.png in Resources */,
-				7CF0510C1C0F18B000B8A5A0 /* image4_2.png in Resources */,
+				7CB8463F1C183B330034829B /* image3.png in Resources */,
+				7CB8463E1C183B330034829B /* image2.png in Resources */,
+				7CB8463D1C183B330034829B /* image1.png in Resources */,
+				7CB846401C183B330034829B /* image4.png in Resources */,
 				7C7DC9491C0DBFE400CB978F /* LaunchScreen.xib in Resources */,
 				7C7DC9461C0DBFE400CB978F /* Images.xcassets in Resources */,
 			);
@@ -277,6 +267,7 @@
 				7C7DC93B1C0DBFE400CB978F /* AppDelegate.m in Sources */,
 				7CF0511B1C0F1F3A00B8A5A0 /* KxMenu.m in Sources */,
 				7C7DC93E1C0DBFE400CB978F /* FirstViewController.m in Sources */,
+				7CD835981C186D4200BDA330 /* Ledger.m in Sources */,
 				7C7DC9381C0DBFE400CB978F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +396,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LedgerBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -415,7 +408,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LedgerBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
