@@ -8,13 +8,16 @@
 //
 
 #import "AddItemViewController.h"
+#import "Ledger.h"
+#import "FirstViewController.h"
 
 @interface AddItemViewController ()<UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate,UITextViewDelegate>
-@property (weak, nonatomic) IBOutlet UIToolbar *doneToolBar;
+
 
 @property (weak, nonatomic) IBOutlet UIPickerView *outcomeTypePicker;
 @property (weak, nonatomic) IBOutlet UIPickerView *incomeTypePicker;
 @property (weak, nonatomic) IBOutlet UIPickerView *myPickerView;
+@property (weak, nonatomic) IBOutlet UIToolbar *doneToolBar;
 
 @property (strong, nonatomic) NSMutableArray *outcomeTypes;
 @property (strong, nonatomic) NSMutableArray *incomeTypes;
@@ -28,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segControl;
 @property (weak, nonatomic) IBOutlet UIButton *doneBtn;
 
+
 @end
 
 @implementation AddItemViewController
@@ -36,7 +40,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //    self.typePicker=[[UIPickerView alloc]init];
+    
+    
     self.outcomeTypePicker.dataSource=self;
     self.outcomeTypePicker.delegate=self;
     [self.view addSubview:self.outcomeTypePicker];
@@ -63,11 +68,19 @@
     self.psTextView.layer.borderWidth=1;
     self.psTextView.layer.cornerRadius=5.0;
     self.doneBtn.layer.cornerRadius=5.0;
-    //  self.typefield.inputAccessoryView=self.doneToolBar;
+    
+    self.ledger=[[Ledger alloc]init];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    if(self.jump){
+        self.psTextView.text=self.detail;
+        self.moneyField.text=self.money;
+        self.jump=NO;
+    }
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -118,6 +131,16 @@
     }
 }
 
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    if(textField==self.moneyField){
+        self.ledger.balance=[NSNumber numberWithDouble:[self.moneyField.text doubleValue]];
+    }
+    else if(textField==self.typefield){
+        self.ledger.ledgerType=self.typefield.text;
+    }
+}
+
+
 -(void) textViewDidBeginEditing:(UITextView *)textView{
     [self.moneyField resignFirstResponder];
     [self.typefield resignFirstResponder];
@@ -125,14 +148,19 @@
     self.myPickerView.hidden=YES;
 }
 
+-(void)textViewDidEndEditing:(UITextView *)textView{
+    self.ledger.PS=self.psTextView.text;
+}
+
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     if(pickerView==self.outcomeTypePicker){
+        self.ledger.inOrOut=@"支出";
         return [self.outcomeTypes objectAtIndex:row];
     }
     else{
+        self.ledger.inOrOut=@"收入";
         return [self.incomeTypes objectAtIndex:row];
     }
-//    return [self.myTypes objectAtIndex:row];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
@@ -143,25 +171,68 @@
     else{
         typeName = [self.incomeTypes objectAtIndex:row];
     }
-//    typeName=[self.myTypes objectAtIndex:row];
     self.typefield.text = typeName;
 }
 
 - (IBAction)doneButtonTypePicker:(id)sender {
+    [self.typefield resignFirstResponder];
     self.outcomeTypePicker.hidden=YES;
     self.incomeTypePicker.hidden=YES;
     self.doneToolBar.hidden=YES;
+    self.ledger.ledgerType=self.typefield.text;
 }
 
 - (IBAction)toggleControl:(id)sender {
     if([self.segControl selectedSegmentIndex]==0){
         self.myPickerView=self.incomeTypePicker;
         self.myTypes=self.incomeTypes;
+        self.ledger.inOrOut=@"支出";
     }
     else{
         self.myPickerView=self.outcomeTypePicker;
         self.myTypes=self.outcomeTypes;
+        self.ledger.inOrOut=@"收入";
     }
+}
+- (IBAction)didNewLedger:(id)sender {
+    self.ledger =[[Ledger alloc]init];
+    self.ledger.balance=[NSNumber numberWithDouble:[self.moneyField.text doubleValue]];
+    if([self.moneyField.text isEqualToString:@""]){
+        UIAlertView *av = [[UIAlertView alloc]initWithTitle:@""
+                                                    message:@"金额不能为空"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles: nil];
+        [av show];
+        return;
+    }
+    self.ledger.inOrOut=[self.segControl selectedSegmentIndex]==0?@"收入":@"支出";
+    self.ledger.ledgerType=self.typefield.text;
+    if([self.typefield.text isEqualToString:@""]){
+        UIAlertView *av = [[UIAlertView alloc]initWithTitle:@""
+                                                    message:@"类型不能为空"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles: nil];
+        [av show];
+        return;
+    }
+    
+    self.ledger.PS=self.psTextView.text;
+    
+    NSDate * mydate=[NSDate date];
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"YYYY年MM月dd日"];
+    self.ledger.date=[dateFormatter stringFromDate:mydate];
+    
+    UITabBarController *tabBar=(UITabBarController*)self.tabBarController;
+    NSArray *viewControllersArray = tabBar.viewControllers;
+    FirstViewController *firstVC=[viewControllersArray objectAtIndex:0];
+    [firstVC addReturn];
+    
+    self.moneyField.text=@"";
+    self.typefield.text=@"";
+    self.psTextView.text=@"";
 }
 
 @end

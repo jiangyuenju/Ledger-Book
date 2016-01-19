@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ledger.h"
 
-@interface FirstViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *myButton;
+@interface FirstViewController : UIViewController<UIScrollViewDelegate>
+
+@property UIButton *myButton;
+@property NSMutableArray* ledgerArray;
+@property (strong, nonatomic) IBOutlet UIScrollView *myScrollView;
 
 
 -(IBAction)clickAdd;
-
+-(void) addReturn;
 @end
 

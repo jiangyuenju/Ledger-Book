@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "drawPie.h"
 @interface ThirdViewController : UIViewController
+
+
+
+@property NSMutableArray* ledgerArray;
 
 
 @end

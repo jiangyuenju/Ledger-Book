@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Ledger : NSObject
+@interface Ledger : NSObject <NSCoding>
 
 @property NSString *ledgerType;
-@property float balance;
-@property bool isOutcome;
+@property NSNumber* balance;
+@property NSString* inOrOut;
 @property NSString *PS;
+@property NSString *date;
 
 @end
