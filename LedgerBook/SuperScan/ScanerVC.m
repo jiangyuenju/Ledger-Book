@@ -8,7 +8,7 @@
 
 #import <JuheBarcode/JuheBarcode.h>
 #ifndef appKeyForBarcodeData
-#define appKeyForBarcodeData    @"017e21026c2b44d9c71121ac3c541d1a"
+#define appKeyForBarcodeData    @"77bcd23bc6abc4dbfc916dbe9aac6397"
 #endif
 
 
